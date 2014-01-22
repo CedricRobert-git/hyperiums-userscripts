@@ -1,10 +1,15 @@
 // ==UserScript==
 // @name        Armies Generation Avg
-// @namespace   http://github.com/Nasga/hyperiums-greasemonkey/
+// @namespace   http://github.com/remold/hyperiums-greasemonkey/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
 // @include    http://hyp2.hyperiums.com/servlet/Fleets?pagetype=factories
-// @version     20
+// @version     21
 // @grant       none
+// @copyright   2013+, Remold Krol (https://github.com/remold)
+// @license     Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+// @author      Remold Krol
+// @homepage    https://github.com/remold
+
 // ==/UserScript==
 
 /* global $:false */
@@ -30,7 +35,10 @@ var race = {
 };
 var spans = $( "span" );
 $('body')
-  .find("TD:contains('Human -') SPAN.highlight")
+  .find("TD:contains('Human -') SPAN.highlight, " +
+        "TD:contains('Humain -') SPAN.highlight, " +
+        "TD:contains('Menschen -') SPAN.highlight, " +
+        "TD:contains('Mensen -') SPAN.highlight")
   .each(function(idx, elt) {
     GaGenSum += parseFloat($(elt).text());
     planets++;
