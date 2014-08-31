@@ -8,7 +8,7 @@ Once you have installed GreaseMonkey you can use the install links below.
 ## Armies Generation
 Shows a summary + Average of the GAs generation on the bottom of the Factories page
 
-[install link: Armies generation](https://github.com/remold/hyperiums-userscripts/raw/master/armies-generation.user.js)
+[install link: Armies generation](https://github.com/Nasga/hyperiums-userscripts/raw/master/armies-generation.user.js)
 
 ##Forum 'highlighting' / track read/unread messages
 Shows which forum threads have new posts.
@@ -16,7 +16,7 @@ Shows which forum threads have new posts.
 Usage: Just use the forum like normal and the script keeps track of all shown/visible posts.
 On the thread overview pages all thread with new messages (not viewed yet) will be shown in italic font.
 
-[install link: Forum Highlighting](https://github.com/remold/hyperiums-userscripts/raw/master/forum-highlight.user.js)
+[install link: Forum Highlighting](https://github.com/Nasga/hyperiums-userscripts/raw/master/forum-highlight.user.js)
 
 ## Forum enhancement
 Shows a link to the last page of a thread in the forum thread overview page.
