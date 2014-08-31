@@ -1,9 +1,11 @@
 #GS scripts for hyperiums
 
-This repository contains multiple GreaseMonkey scripts for Hyperiums (http://www.hyperiums.com)
+This repository contains multiple userscripts for Hyperiums (http://www.hyperiums.com)
 
-To use these scripts, you must use Firefox with [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) extension.
-Once you have installed GreaseMonkey you can use the install links below.
+To use these scripts, you should use : 
+* Firefox with [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) extension.
+* Safari with [NinjaKit](https://github.com/os0x/NinjaKit/) extension.
+* Chrome with [Tampermonkey](http://tampermonkey.net/) extension.
 
 ## Armies Generation
 Shows a summary + Average of the GAs generation on the bottom of the Factories page
@@ -56,3 +58,7 @@ Shows a live countdown of the Hyperiums Ticks on the bottom of the Hyperiums pag
 Shows the percentage of the fleet upkeep on the Income statement page.
 
 [install link: Upkeep percentage](https://github.com/remold/hyperiums-userscripts/raw/master/upkeep-percent.user.js)
+
+## License
+Thoses userscripts are under the New BSD License (BSD-3-Clause). Please, see
+[`LICENSE`](LICENCE).
