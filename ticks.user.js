@@ -3,12 +3,12 @@
 // @namespace   http://nasga.github.com/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
 // @require     https://raw.github.com/Nasga/hyperiums-userscripts/master/libs/moment.min.js
-// @include     http://hyp2.hyperiums.com/servlet/*
+// @include     *.hyperiums.com/servlet/*
 // @version     3
 // @grant       none
 // ==/UserScript==
 
-// This is a port from https://github.com/resident-uhlig/chrome-hyperiums7
+// This is a port from https://github.com/resident-uhlig/chrome-Hyperiums10
 // Thanks to natalie_g for the original work
 
 /* global $:false, moment:false */
@@ -38,20 +38,20 @@ Tick.prototype.getNextDate = function (serverDate) {
   return nextDate;
 };
 
-var Hyperiums7 = {
+var Hyperiums10 = {
   ticks: [
     new Tick('Build', 23),
-    new Tick('Cash', 31, 8, 6),
-    new Tick('Move/Control', 26),
-    new Tick('Energy/Tech', 18),
-    new Tick('N/A', 6),
-    new Tick('Battle', 6, 2)
+    new Tick('Cash', 43, 8, 6),
+    new Tick('Move/Control', 38),
+    new Tick('Energy/Tech', 30),
+    new Tick('N/A', 18),
+    new Tick('Battle', 18, 2)
   ].sort(function (a, b) {
     return a.name.localeCompare(b.name);
   })
 };
 
-var ticks = Hyperiums7.ticks;
+var ticks = Hyperiums10.ticks;
 
 
 var offsetInMS = new Date().getTime() -
@@ -64,11 +64,11 @@ var offsetInMS = new Date().getTime() -
     );
 
 $('.servertime').remove();
-var $div = $('<div id="hyperiums7-ticks" class="servertime">');
+var $div = $('<div id="Hyperiums10-ticks" class="servertime">');
 $('body').append($div);
 $('body').append(
   '<style type="text/css">' +
-  '#hyperiums7-ticks {' +
+  '#Hyperiums10-ticks {' +
     'position:fixed;' +
     'bottom:0;' +
     'left:0;' +
@@ -79,27 +79,27 @@ $('body').append(
     'padding:0.3em 0.5em;' +
     'text-align:center;' +
   '}' +
-  '#hyperiums7-ticks ul {' +
+  '#Hyperiums10-ticks ul {' +
     'list-style-type:none;' +
     'margin:0;' +
     'padding:0;' +
     'display:inline;' +
   '}' +
-  '#hyperiums7-ticks ul li {' +
+  '#Hyperiums10-ticks ul li {' +
     'display:inline;' +
     'margin:0 0.5em;' +
     'white-space:nowrap;' +
   '}' +
-  '#hyperiums7-ticks ul li[title] {' +
+  '#Hyperiums10-ticks ul li[title] {' +
     'cursor:help;' +
   '}' +
-  '.hyperiums7-blink {' +
-    '-webkit-animation-name:hyperiums7-blink;' +
+  '.Hyperiums10-blink {' +
+    '-webkit-animation-name:Hyperiums10-blink;' +
     '-webkit-animation-duration:300ms;' +
     '-webkit-animation-timing-function:linear;' +
     '-webkit-animation-iteration-count:infinite;' +
   '}' +
-  '@-webkit-keyframes hyperiums7-blink {' +
+  '@-webkit-keyframes Hyperiums10-blink {' +
     '0% { opacity: 1.0; }' +
     '50% { opacity: 0.5; }' +
     '100% { opacity: 1.0; }' +
@@ -122,7 +122,7 @@ $('body').append(
       text(tick.name + ': ' + moment(msUntilNextDate).utc().format('HH:mm:ss')).
       attr('title', moment(nextDate).utc().format('YYYY-MM-DD HH:mm:ss'));
     if (msUntilNextDate < 10000) { // 10 seconds
-      li.addClass('hyperiums7-blink');
+      li.addClass('Hyperiums10-blink');
     }
     if (msUntilNextDate < 60000) { // 1 minute
       li.addClass('alert');
